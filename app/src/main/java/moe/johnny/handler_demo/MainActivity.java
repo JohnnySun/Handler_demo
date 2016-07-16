@@ -1,6 +1,7 @@
 package moe.johnny.handler_demo;
 
 import android.os.Handler;
+import android.os.Looper;
 import android.os.Message;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -14,7 +15,7 @@ public class MainActivity extends AppCompatActivity {
     private Button mButton_class;
     private TestHandlerClass mTestHandlerClass;
     final static int MESSAGE_THREAD= 1;
-    Handler mHandler = new Handler() {
+    Handler mHandler = new Handler(Looper.getMainLooper()) {
         @Override
         public void handleMessage(Message msg) {
             switch (msg.what) {

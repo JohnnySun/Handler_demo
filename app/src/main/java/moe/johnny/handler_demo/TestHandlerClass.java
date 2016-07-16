@@ -1,6 +1,8 @@
 package moe.johnny.handler_demo;
 
+import android.content.Context;
 import android.os.Handler;
+import android.os.Looper;
 import android.os.Message;
 
 /**
@@ -11,6 +13,7 @@ public class TestHandlerClass {
     final static int MESSAGE_CLASS = 2;
 
     Handler mHandler;
+
     public TestHandlerClass(Handler mHandler) {
         this.mHandler = mHandler;
     }
